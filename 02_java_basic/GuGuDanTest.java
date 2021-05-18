@@ -18,14 +18,14 @@ public class GuGuDanTest {
 		dan = 2;
 		
 		do {
-			System.out.print(dan + "*" + i + "=" + i * dan + "\t");
+			do {
+				System.out.print(dan + "*" + i + "=" + i * dan + "\t");
+				dan += 1;
+				
+			} while (dan <= 9);
 			System.out.println();
+			dan = 2;
 			i += 1;
-			
-//			do {
-//				
-//				
-//			} while ();
 		} while (i <= 9);
 			
 	}
