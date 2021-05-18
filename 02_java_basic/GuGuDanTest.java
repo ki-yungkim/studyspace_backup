@@ -1,9 +1,60 @@
 package com.work.view;
 
 public class GuGuDanTest {
+	public static void main(String[] args) {
+		System.out.println("5. 반복문을 활용하여 홀수스텝 구구단만 출력\n");
+		int i;
+		int dan;
+		for (dan = 2; dan <= 9; dan++) {
+			System.out.print(dan +"단\t");
+		}
+		System.out.println();
+		for (i = 1; i <=9; i++) {
+			if (i % 2 == 1) {
+				for (dan =2; dan <= 9; dan++) {
+					System.out.print(dan + "*" + i + "=" + i * dan + "\t");
+				}
+			}
+			System.out.println();
+			}
+	}
+			
+	
+	
+	
+	
+	
+	
+	
+	
+	public static void main5(String[] args) {
+		System.out.println("4. 반복문을 활용하여 짝수 구구단만 출력\n");
+		int i;
+		int dan;
+		for (dan = 2; dan <= 9; dan++) {
+			if (dan % 2 == 0) {
+			System.out.print(dan +"단\t");
+			}
+		}
+		System.out.println();
+		for (i = 1; i <=9; i++) {
+			
+			for (dan =2; dan <= 9; dan++) {
+				if (dan % 2 == 0) {
+				System.out.print(dan + "*" + i + "=" + i * dan + "\t");
+				}
+		}
+			System.out.println();
+		}
+	}
+	
+	
+	
+	
+	
 	
 	//do ~ while 구문
-	public static void main(String[] args) {
+	public static void main4(String[] args) {
 		System.out.println("3. do ~ while 구문을 활용한 구구단\n");
 		
 		int i = 1;
