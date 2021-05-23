@@ -38,7 +38,7 @@ import java.util.Random;
 public class RandomTeamTest {
 
 	public static void main(String[] args) {
-		if(args.length != 1) {
+		if (args.length != 1) {
 			System.out.println("Usage: javac RamdomTeamTest 팀원 숫자");
 			System.exit(0);
 		}
@@ -55,7 +55,7 @@ public class RandomTeamTest {
 		String[][] Team  = new String[teamcount][];
 
 
-		for(int i = 0; i < teamcount; i++) {
+		for (int i = 0; i < teamcount; i++) {
 			Team[i] = new String[(teamNum + 1)]; 
 		}
 
@@ -74,8 +74,8 @@ public class RandomTeamTest {
 
 		int index = 0;
 		int i = 0;
-		for(int j = 0; j < teamcount; j++) {
-			for(int k = 0; k < teamNum; k++) {
+		for (int j = 0; j < teamcount; j++) {
+			for (int k = 0; k < teamNum; k++) {
 				index = num[i];
 				Team[j][k] = names[index];
 				if(i < (names.length)) {
@@ -87,7 +87,7 @@ public class RandomTeamTest {
 		}
 
 		int[] check = new int[teamcount];
-		for(i = 0; i < teamcount; i++ ) {
+		for (i = 0; i < teamcount; i++ ) {
 			check[i] = (int)(Math.random() * teamcount);
 			for (int j = 0; j < i; j++) {
 				if(check[i] == check[j]) {
@@ -97,8 +97,8 @@ public class RandomTeamTest {
 		}
 		int k = 0;
 		int j = 0;
-		for(i = (teamcount * teamNum); i < names.length;) {
-			for(j = 0; j < (names.length % teamNum); j++) {
+		for (i = (teamcount * teamNum); i < names.length;) {
+			for (j = 0; j < (names.length % teamNum); j++) {
 				k = check[j];
 				index = num[i];
 				Team[k][teamNum] = names[index];
