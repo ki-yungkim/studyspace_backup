@@ -18,7 +18,8 @@ import java.util.Arrays;
  */
 public class LottoGameTest {
 	public static void main(String[] args) {
-		main2();
+		game1();
+		game5();
 	}
 	
 	
@@ -28,10 +29,10 @@ public class LottoGameTest {
 			import java.util.Arrays;
 			Arrays.sort(배열);
 			*/
-	public static void main2() {
+	public static void game5() {
 		int[][] Numbers = new int[5][6];
 
-		for (int index=0; index < 5; index++) {
+		for (int index = 0; index < 5; index++) {
 			for (int i = 0; i < 6; i++) {
 				Numbers[index][i] = getLottoNo();
 				for (int j = 0; j < i; j++) {
@@ -45,7 +46,7 @@ public class LottoGameTest {
 		
 		System.out.println("로또 5게임 : 2차원 배열 사용");
 		for (int index = 0; index < 5; index++) {
-			for (int j = 0; j <6; j++) {
+			for (int j = 0; j < 6; j++) {
 				//System.out.print(Numbers[index][j] + "\t");
 			}
 			//System.out.println();
@@ -68,9 +69,9 @@ public class LottoGameTest {
 		import java.util.Arrays;
 		Arrays.sort(배열);
 		*/
-	public static void main1() {
+	public static void game1() {
 		int[] num = new int[6];
-		for (int index=0; index < 6; index++) {
+		for (int index = 0; index < 6; index++) {
 			num[index] = getLottoNo();
 			for (int j = 0; j < index; j++) {
 				if (num[index] == num[j]) {
@@ -82,10 +83,11 @@ public class LottoGameTest {
 		System.out.println("로또 1게임 : 1차원 배열 사용");
 		for (int i = 0; i < 6; i++) {
 			System.out.print(num[i] + "\t");
-
+			
 			//System.out.print(getLottoNo());
 			//System.out.println("\t");
 		}
+		System.out.println("\n");
 	}
 
 
