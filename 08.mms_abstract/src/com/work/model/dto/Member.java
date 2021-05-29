@@ -186,7 +186,11 @@ public class Member {
 	public void setGrade(String grade) {
 		this.grade = grade;
 	}
-
+	
+	
+	
+	
+	
 // 재정의하지 않으면 javaa.lang.Object#toString() 상속 메서드를 그대로 사용 
 //	getClass().getName() + '@' + Integer.toHexString(hashCode())
 	

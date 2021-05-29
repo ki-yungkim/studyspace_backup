@@ -53,7 +53,19 @@ public abstract class MemberServiceAbstract {
 	 * @param memberId 아이디
 	 * @return 존재시에 저장위치 번호, 미존재시 -1
 	 */
-	public abstract int exist(String memberId); //저장하면 구현 클래스 MemberService에서 error 
+	public abstract int exist(String memberId); //저장하면 구현 클래스 MemberService에서 error
+	
+	public abstract int existPw(String memberPw);
+	
+	public abstract int existEntryDate(String entryDate);
+	
+	public abstract int existMobile(String mobile);
+	
+	public abstract int existEmail(String email);
+	
+	public abstract int[] existGrade(String grade);
+	
+	
 	
 	
 
@@ -97,7 +109,7 @@ public abstract class MemberServiceAbstract {
 	 * -- 반환 타입 : boolean 암호변경성공 true, 실패하면 false 
 	 */
 	
-	public abstract boolean setMemberPw(String memberId, String memberPw, String newPW);
+	public abstract boolean setMemberPw(String memberId, String memberPw, String newPw);
 
 	/**
 	 * 회원탈퇴 
@@ -119,10 +131,104 @@ public abstract class MemberServiceAbstract {
 	
 	public abstract void removeMember();
 	
+	/**
+	 * 로그인
+	 * -- 메서드명 : login()
+	 * -- 매개변수 : memberId, memberPw
+	 * -- 반환 타입 : void 
+	 */
+	public abstract void login(String memberId, String memberPW);
 	
 	/**
-	 * 로그인 로그아웃
-	 * 이건 나중에 
+	 * 로그아웃 
+	 * -- 메서드명 : logout()
+	 * -- 매개변수 : memberId
+	 * -- 반환 타입 : void 
+	 */
+	
+	public abstract void logout(String memberId);
+	
+	/**
+	 * 가입일 조회해서 아이디 출력
+	 * 
+	 */
+	public abstract void entryDateId(String entryDate);
+	
+	/**
+	 * 전화번호, 이메일  조회해서 아이디 출력
+	 */
+	public abstract void searchId(String mobile, String email);
+	
+	/**
+	 * 전화번호, 이메일 조회해서 비밀번호 출력
+	 */
+	public abstract void searchPw(String mobile, String email);
+	
+	/**
+	 * 등급별 회원 아이디 조회
+	 */
+	public abstract void gradeMember(String grade);
+	
+	
+	
+	
+	
+	
+	
+	
+	/**
+	 * 로그인 시 마일리지 100점 추가
+	 * 
+	 */
+//	public abstract void loginplus(String memberId, String memberPw);
+	
+	
+	
+	/**
+	 * 아이디 입력하면 마일리지 조회
+	 * 마일리지 100000 이상이면 등급 업 (추후 로그인 할때마다 체크 하는 식으로 변경) 
+	 *  
+	 */
+//	public abstract void gradeUp(String memberId);
+	
+	
+	
+	/**
+	 * 마일리지 조회해서 아이디를 마일리지 내림차순 정렬 
+	 * 
+	 */
+	
+//	public abstract void mileageCheck(String mileage);
+	
+	
+
+	
+	
+	
+	/**
+	 * 초기회원 등록 메서드
+	 */
+	public void initMember() {
+		Member dto1 = new GeneralMember("user01", "password01", "홍길동", "01012341000", "user01@work.com", "2020-12-15", "G", 50000);
+		Member dto2 = new GeneralMember("user02", "password02", "강감찬", "01012342000", "user02@work.com", "2021-01-05", "G", 950000);
+		Member dto3 = new SpecialMember("user03", "password03", "이순신", "01012343000", "user03@work.com", "2020-11-15", "S", "강동원");
+		Member dto4 = new SpecialMember("user04", "password04", "김유신", "01012344000", "user04@work.com", "2021-01-05", "S", "김하린");
+		Member dto5 = new AdminMember("administrator", "admin1004", "유관순", "01012345000", "administrator@work.com", "2020-04-01", "A", "선임");
+		
+	};
+	
+	
+		
+	
+	
+	/**
+	 * 추가기능
+	 *  
+	 * 로그인 로그인 시 마일리지 100점 추가
+	 * 로그아웃
+	 * 등급별 회원 조회
+	 * 마일리지 조회, 등업
+	 * 
 	 * 
 	 */
 	
