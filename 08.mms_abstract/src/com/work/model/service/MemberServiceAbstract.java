@@ -63,7 +63,13 @@ public abstract class MemberServiceAbstract {
 	
 	public abstract int existEmail(String email);
 	
-	public abstract int[] existGrade(String grade);
+	public abstract int existGrade(String grade);
+	
+	public abstract int[] existGradeArray(String grade);
+
+	
+	
+	
 	
 	
 	

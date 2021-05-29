@@ -102,7 +102,7 @@ public class Test {
 		service.searchPw("01012344000","user04@work.com");
 		
 		print("등급 별 아이디 조회");
-		service.gradeMember("S");
+		service.gradeMember("G");
 		
 		
 	}

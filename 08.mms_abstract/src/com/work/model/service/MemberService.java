@@ -191,18 +191,36 @@ public class MemberService extends MemberServiceAbstract {
 	}
 
 
+	
+	
 	@Override
-	public int[] existGrade(String grade) {
+	public int existGrade(String grade) {
+		for (int index = 0; index < count; index++) { 
+
+			if(members[index].getGrade().equals(grade)) {
+				return index;
+			}
+		}
+		return -1;
+	}
+
+
+	@Override
+	public int[] existGradeArray(String grade) {
 		int[] temp = new int[count];
 		int index = 0;
 		for (int i = 0; i < count; i++) {
 			if(members[index].getGrade().equals(grade)) {
-				temp[i] = index;
+				temp[i] = index ;
+			} else {
+				temp[i] = -1;
 			}
 			index++;
 		}
 		return temp; 
 	}
+	
+	
 
 
 	/** 전체 조회
@@ -484,18 +502,18 @@ public class MemberService extends MemberServiceAbstract {
 
 	@Override
 	public void gradeMember(String grade) {
-		int[] indexGrade = existGrade(grade);
+		int[] indexGrade = existGradeArray(grade);
 		String[] ID = new String[count];
 		for (int i = 0; i < count; i++) {
-			if (indexGrade[i] - 1  >= 0) {
-
+			if (indexGrade[i] >= 0) {
 				int j = indexGrade[i];
-
 				ID[i] = members[j].getMemberId();
-				System.out.println("해당 등급에 맞는 아이디는 : " + ID[i] + "입니다");
-			}
+				System.out.println("해당 등급에 해당하는 아이디는 : " + ID[i] + "입니다");
+			} 
 		}
-
+		if (existGrade(grade) < 0) {
+			System.out.println("잘못된 등급을 입력하셨습니다.");
+		}
 	}
 
 
