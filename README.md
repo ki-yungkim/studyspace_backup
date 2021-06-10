@@ -1,15 +1,10 @@
-<<<<<<< Updated upstream
+
 # Playdata_DE_Day17_210610
 ## Playdata 빅데이터 엔지니어 양성과정 17일차 210610
 
 ## DB 1일차
 ## MySQL, Oracle 설치
 
-
-=======
-# Playdata_DE_SQL_Day17_210610
- *Playdata 빅데이터 엔지니어 양성과정 17일차 210610
-# DB 1일차 
  
 ## MySQL 설치
 * https://www.mysql.com/ - Community Edition -  MySQL Community (GPL) Downloads
@@ -171,22 +166,22 @@
 *		| 수식 | 함수명() | (SUB-QUERY)
 * FROM 테이블명;
 		
-	> SELECT EMPNO, ENAME, SAL FROM EMP;
-	> SELECT EMPNO "사번" , ENAME "이름" , SAL "급여"  FROM EMP;
-	> select 5 * 3 + 10 FROM DUAL;
+*	> SELECT EMPNO, ENAME, SAL FROM EMP;
+*	> SELECT EMPNO "사번" , ENAME "이름" , SAL "급여"  FROM EMP;
+*	> select 5 * 3 + 10 FROM DUAL;
 * 컬럼 별명 : 
-	>> "대소문자 구분"
-	>> "공백 가능"
-	>> "특수문자"
+*	>> "대소문자 구분"
+*	>> "공백 가능"
+*	>> "특수문자"
+*	
+*	>> 별명 "" 생략가능 :  대문자, 공백없고, 특수문자 없는 경우	
 	
-	>> 별명 "" 생략가능 :  대문자, 공백없고, 특수문자 없는 경우	
-	
-	> SELECT EMPNO "Employee No" , ENAME "Name" , SAL "Salary"  FROM EMP;
-	> SELECT EMPNO EmployNo , ENAME Name , SAL Salary  FROM EMP;
+*	> SELECT EMPNO "Employee No" , ENAME "Name" , SAL "Salary"  FROM EMP;
+*	> SELECT EMPNO EmployNo , ENAME Name , SAL Salary  FROM EMP;
 
 * DUAL 테이블 
-	>> 오라클 SELECT 필수형식을 위한 DUMMY 테이블 
-	>> 연산식 테스트, 함수 테스트 등 
+*	>> 오라클 SELECT 필수형식을 위한 DUMMY 테이블 
+*	>> 연산식 테스트, 함수 테스트 등 
 	
 2. 전체형식
 
@@ -201,8 +196,8 @@
 * 정렬항목 : 컬럼명, SELECT 항목에 대한 인덱스 번호, 별명, 수식 
 * 정렬방법 : 올림차순(ASC, 기본), 내림차순 (DESC)
 * 정렬기준 : 
-	>> 숫자, 날짜 (작은 것 => 큰 것, 1900, 1901, 1902 ...  ) 
-	>> 영문 : ABC...
-	>> 한글 : 가나다...
+*	>> 숫자, 날짜 (작은 것 => 큰 것, 1900, 1901, 1902 ...  ) 
+*	>> 영문 : ABC...
+*	>> 한글 : 가나다...
 *	최근 입사자 조회하려면 DESC 
->>>>>>> Stashed changes
+
