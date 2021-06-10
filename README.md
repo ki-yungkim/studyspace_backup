@@ -163,7 +163,7 @@
 ## DQL : 조회 (select)
 1. 필수형식
 * SELECT * | 컬럼명1, 컬럼명X | 컬럼명1 "별명", 컬럼명X "별명"  (* 는 모든 컬럼) 
-*		| 수식 | 함수명() | (SUB-QUERY)
+* | 수식 | 함수명() | (SUB-QUERY)
 * FROM 테이블명;
 		
 *	> SELECT EMPNO, ENAME, SAL FROM EMP;
