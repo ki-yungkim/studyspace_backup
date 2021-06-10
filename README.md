@@ -64,30 +64,30 @@
 * 콘솔창이 떠있는 동안에만 적용
 
 * 설정확인
-** show 
+ * show 
 * 환경설정 전체 확인
-** show all 
+ * show all 
 * 설정
-** set linesize 300
-** set pagesize 300
+ * set linesize 300
+ * set pagesize 300
 
 
 * 화면 지우기
-** cl scr 
-
+ * cl scr 
+ 
 * ; 있어도 되고 없어도 된다.
 
 * 종료
-** exit/quit
+ * exit/quit
 
 * 연결 해제
-** discon
+ * discon
 
 * 연결 계정 사용자 아이디 조회
-** show user 
+ * show user 
 
 * 재연결
-** conn id/pw 
+ * conn id/pw 
 
 ## 오라클 설치 기본 사용자 계정명 
 * sys : 관리자 계정 
@@ -99,34 +99,34 @@
 * ; 꼭 있어야 한다.
 
 * 계정 잠금 해제 : hr 계정 
-** alter user hr account unblock;
+ * alter user hr account unblock;
 
 * 계정 암호 변경
-** alter user hr identified by 비밀번호;
+ * alter user hr identified by 비밀번호;
 
 * 전체 테이블 목록 조회
-** SELECT * FROM TAB;
+ * SELECT * FROM TAB;
 
 * 테이블 구조 (스키마) 조회
-** desc 테이블;
+ * desc 테이블;
 
 * 계정 생성
-** create user 아이디 identified by 비밀번호;
+ * create user 아이디 identified by 비밀번호;
 
 * 권한 부여
-** grant connect, resource, create view to 아이디;
+ * grant connect, resource, create view to 아이디;
 
 * 계정 삭제
-** drops user 아이디 cascade; - 연결되어 있는거 다 삭제
-** drop user 아이디; - 그냥 지우면 에러
+ * drops user 아이디 cascade; - 연결되어 있는거 다 삭제
+ * drop user 아이디; - 그냥 지우면 에러
 
 * 계정 잠금
-** drop user 아이디 account lock;
+ * drop user 아이디 account lock;
 
 ## 실행 
-** start c:\dir\dir\script-file.sql
-** start script-file.sql
-** @script-file.sql
+* start c:\dir\dir\script-file.sql
+* start script-file.sql
+* @script-file.sql
 
 ## Spool
 * SPO[OL] [file_name[.ext] [CRE[ATE] | REP[LACE] | APP[END]] | OFF | OUT]
