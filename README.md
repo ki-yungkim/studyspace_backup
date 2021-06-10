@@ -29,16 +29,16 @@
 
 ## 사용자 계정 생성 
 * root 권한 : root 계정 접속 (mysql -u root -padmin1004)
-* dos > mysql -u root -p 
+	* dos > mysql -u root -p 
 
 * 사용자 계정 삭제 
-* drop user scott@localhost;
+	* drop user scott@localhost;
 
 * 사용자 계정 생성
-* create user scott@localhost identified by 'tiger';
+	* create user scott@localhost identified by 'tiger';
 
 * 사용자 권한 부여 
-* grant all privileges on *.* to scott@localhost; => 모든 권한 부여 - 루트 권한 급	
+	* grant all privileges on *.* to scott@localhost; => 모든 권한 부여 - 루트 권한 급	
 
 ## 에러 주의
 * error in your SQL syntax : 보통 오타
@@ -64,12 +64,12 @@
 * 콘솔창이 떠있는 동안에만 적용
 
 * 설정확인
- * show 
+	* show 
 * 환경설정 전체 확인
- * show all 
+	* show all 
 * 설정
- * set linesize 300
- * set pagesize 300
+	* set linesize 300
+	* set pagesize 300
 
 
 * 화면 지우기
